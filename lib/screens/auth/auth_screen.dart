@@ -2,11 +2,14 @@ import 'dart:developer';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ecommerce_app/app/app_bootstratper.dart';
 import 'package:ecommerce_app/screens/auth/auth_provider.dart';
 import 'package:ecommerce_app/screens/home/home.dart';
 import 'package:provider/provider.dart';
+
+import '../common_widgets.dart';
 
 class AuthWrapper extends StatelessWidget {
   const AuthWrapper({super.key});
@@ -24,7 +27,7 @@ class AuthWrapper extends StatelessWidget {
 
           return const Scaffold(
             body: Center(
-              child: CircularProgressIndicator(),
+              child: Loader(),
             ),
           );
         },
@@ -120,7 +123,9 @@ class LogIn extends StatelessWidget {
                               hintText: "Name",
                               filled: true),
                         ),
-                    ],
+                    ].animate(interval: 50.ms)
+              .fade(duration: 500.ms)
+              .slide(duration: 200.ms),
                   ),
                 ),
               ),
@@ -129,7 +134,7 @@ class LogIn extends StatelessWidget {
                     ? Center(
                         child: Column(
                         children: const [
-                          CircularProgressIndicator(),
+                          Loader(),
                           SizedBox(
                             height: 28,
                           ),
@@ -188,10 +193,12 @@ class LogIn extends StatelessWidget {
                           const SizedBox(
                             height: 62,
                           ),
-                        ],
+                        ].animate(interval: 50.ms)
+              .fade(duration: 500.ms)
+              .slide(duration: 200.ms),
                       ),
               ),
-            ],
+            ] 
           ),
         ),
       );

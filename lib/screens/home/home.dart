@@ -2,10 +2,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ecommerce_app/app/app_bootstratper.dart';
 import 'package:ecommerce_app/screens/home/home_provider.dart';
 import 'package:provider/provider.dart';
+
+import '../common_widgets.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -38,7 +41,7 @@ class _HomeState extends State<Home> {
           builder: ((context, value, child) {
             if (value.homePageState == HomePageState.loading) {
               return const Center(
-                child: CircularProgressIndicator(),
+                child: Loader(),
               );
             }
 
@@ -136,7 +139,9 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                   ),
-                );
+                ) .animate()
+              .fade(duration: 500.ms)
+              .slide(duration: 200.ms);
               }),
             );
           }),

@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/screens/common_widgets.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_app/app/app_bootstratper.dart';
@@ -29,6 +30,6 @@ class _EcommerceAppState extends State<EcommerceApp> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: Center(child: CircularProgressIndicator()));
+    return const Scaffold(body: Center(child:Loader()));
   }
 }
