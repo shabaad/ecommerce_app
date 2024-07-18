@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "718278914719",
+    "project_id": "ecommerce-app-8a408",
+    "storage_bucket": "ecommerce-app-8a408.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718278914719:android:2d424664f4e5210c8f28aa",
+        "android_client_info": {
+          "package_name": "com.example.ecommerceapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATGqf9Qz89Ix3sDwicpSvuzZfoOvCCIMg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718278914719:android:38719eeb0e72ca088f28aa",
+        "android_client_info": {
+          "package_name": "com.example.pingolearn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATGqf9Qz89Ix3sDwicpSvuzZfoOvCCIMg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
